@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use BiCache, please cite our paper."
+title: "BiCache"
+type: software
+authors:
+  - family-names: Go
+    given-names: Younghun
+  - family-names: Han
+    given-names: Jaehoon
+  - family-names: Shin
+    given-names: Changyong
+  - family-names: Yoo
+    given-names: Chuck
+  - family-names: Yang
+    given-names: Gyeongsik
+preferred-citation:
+  type: conference-paper
+  title: "Enabling KV Caching of Shared Prefix for Diffusion Language Models"
+  authors:
+    - family-names: Go
+      given-names: Younghun
+    - family-names: Han
+      given-names: Jaehoon
+    - family-names: Shin
+      given-names: Changyong
+    - family-names: Yoo
+      given-names: Chuck
+    - family-names: Yang
+      given-names: Gyeongsik
+  conference:
+    name: "The 2026 Conference on Empirical Methods in Natural Language Processing"
+  year: 2026
+  url: "https://arxiv.org/abs/2606.07571"

@@ -1,0 +1,6 @@
+torch
+transformers==4.49.0
+hf_transfer
+lm_eval==0.4.10
+lm-eval[math]
+accelerate==0.34.2

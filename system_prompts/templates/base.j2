@@ -1,0 +1,21 @@
+{#- Base template -#}
+{%- set dir = "tasks/" + task -%}
+You are a helpful and precise reasoning assistant specialized in {% include dir + "/role.j2" %}
+
+
+## Task Instructions
+
+{% include dir + "/instructions.j2" %}
+
+
+## Safety Instructions
+
+{% include "partials/safety_instructions.j2" %}
+
+{%- if fewshots %}
+
+
+## Examples
+
+{% include dir + "/examples.j2" %}
+{%- endif -%}
