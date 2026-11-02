@@ -103,13 +103,26 @@ If GPU memory is limited, reduce these values to avoid out-of-memory errors.
 If you use BiCache, please cite our paper:
 
 ```bibtex
-@misc{go2026enablingkvcachingshared,
-      title={Enabling KV Caching of Shared Prefix for Diffusion Language Models}, 
-      author={Younghun Go and Jaehoon Han and Changyong Shin and Chuck Yoo and Gyeongsik Yang},
-      year={2026},
-      eprint={2606.07571},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG},
-      url={https://arxiv.org/abs/2606.07571}, 
+@inproceedings{go-etal-2026-enabling,
+    title = "Enabling {KV} Caching of Shared Prefix for Diffusion Language Models",
+    author = "Go, Younghun  and
+      Han, Jaehoon  and
+      Shin, Changyong  and
+      Yoo, Chuck  and
+      Yang, Gyeongsik",
+    editor = "Lee, Hung-Yi  and
+      Dev, Sunipa  and
+      Li, Jessy  and
+      Elliott, Desmond",
+    booktitle = "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+    month = oct,
+    year = "2026",
+    address = "Budapest, Hungary",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.emnlp-main.116/",
+    doi = "10.18653/2026.emnlp-main.116",
+    pages = "2699--2717",
+    ISBN = "979-8-89176-459-0",
+    abstract = "Key-value (KV) caching for shared prefixes is essential for high-throughput large language model (LLM) serving, but it faces critical challenges in emerging diffusion language models (DLMs). In DLMs, bidirectional attention means that updating any token dynamically alters the entire context and its corresponding KVs. Thus, existing caching techniques developed for LLMs, which assume that KVs remain invariant once computed, corrupt the shared prefix KVs. Our experiments show that applying these techniques to DLMs causes model accuracy to collapse to near zero.\par To unlock high-throughput DLM serving, we propose bidirectional prefix caching, BiCache, the first KV caching technique for shared prefixes in DLMs. BiCache is designed based on key observations from our comprehensive analysis: shared prefix KVs remain stable and reusable in shallow layers, while the depth of shallow layers depends on the fraction of shared prefix tokens in each request. Thus, BiCache dynamically identifies a safe layer depth for reusing shared prefix KVs and eliminates redundant computation. Evaluations demonstrate that BiCache significantly improves serving throughput by 36.3{\%}{--}98.3{\%} compared to existing techniques without accuracy collapse (only 0{--}1.8{\%} difference)."
 }
 ```
